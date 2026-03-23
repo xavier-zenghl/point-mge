@@ -1,0 +1,16 @@
+torch>=2.0
+torchvision
+timm>=0.9.0
+einops
+pointnet2_ops
+pytorch3d
+open3d
+numpy
+scipy
+tensorboard
+wandb
+easydict
+pyyaml
+tqdm
+pytest
+h5py
