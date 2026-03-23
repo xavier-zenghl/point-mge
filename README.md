@@ -9,6 +9,10 @@
 
 This repository is an unofficial reproduction of **Point-MGE**, a joint framework that unifies point cloud representation learning and 3D shape generation. Point-MGE introduces a VQVAE tokenizer targeting NeRF triplane features, a sliding-mask pretraining strategy with an Extractor-Generator architecture, and an autoregressive GPT generator for 3D shape synthesis. The pretrained Extractor transfers to downstream tasks including shape classification, few-shot learning, and part segmentation.
 
+<p align="center">
+  <img src="docs/images/framework.png" width="800">
+</p>
+
 ## Installation
 
 ### Requirements
