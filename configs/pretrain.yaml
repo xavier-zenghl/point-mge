@@ -1,0 +1,32 @@
+data:
+  dataset: shapenet55
+  data_root: data/ShapeNet55
+  pc_dir: shapenet_pc
+  n_points: 2048
+  train_split: train
+  val_split: test
+
+model:
+  embed_dim: 384
+  num_groups: 64
+  group_size: 32
+  extractor_depth: 12
+  generator_depth: 4
+  num_heads: 6
+  codebook_size: 8192
+  mask_beta: 0.5
+  mask_u: 2.0
+
+train:
+  epochs: 300
+  batch_size: 128
+  lr: 1e-3
+  weight_decay: 0.05
+  warmup_epochs: 10
+  min_lr: 1e-5
+  grad_accum_steps: 1
+
+output:
+  exp_dir: experiments/pretrain
+  save_freq: 50
+  log_freq: 10

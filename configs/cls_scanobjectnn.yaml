@@ -1,0 +1,27 @@
+data:
+  dataset: scanobjectnn
+  data_root: data/ScanObjectNN
+  variant: hardest
+  n_points: 2048
+  num_classes: 15
+
+model:
+  embed_dim: 384
+  num_groups: 64
+  group_size: 32
+  extractor_depth: 12
+  num_heads: 6
+  pretrained: experiments/pretrain/best.pth
+
+train:
+  epochs: 300
+  batch_size: 32
+  lr: 5e-4
+  weight_decay: 0.05
+  warmup_epochs: 10
+  min_lr: 1e-5
+
+output:
+  exp_dir: experiments/cls_scanobjectnn
+  save_freq: 50
+  log_freq: 10

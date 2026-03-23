@@ -1,0 +1,31 @@
+data:
+  dataset: modelnet40
+  data_root: data/ModelNet40
+  pc_dir: modelnet40_pc
+  n_points: 1024
+  train_split: train
+  val_split: test
+  num_classes: 40
+
+model:
+  embed_dim: 384
+  num_groups: 64
+  group_size: 32
+  extractor_depth: 12
+  num_heads: 6
+  pretrained: experiments/pretrain/best.pth
+
+train:
+  epochs: 300
+  batch_size: 32
+  lr: 5e-4
+  weight_decay: 0.05
+  warmup_epochs: 10
+  min_lr: 1e-5
+  vote: true
+  vote_num: 10
+
+output:
+  exp_dir: experiments/cls_modelnet40
+  save_freq: 50
+  log_freq: 10
