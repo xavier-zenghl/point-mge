@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data & Experiments
+data/
+experiments/
+checkpoints/
+*.pth
+*.ckpt
+
+# Logs
+*.log
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
