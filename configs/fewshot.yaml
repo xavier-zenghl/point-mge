@@ -1,0 +1,17 @@
+data:
+  dataset: modelnet40
+  data_root: data/ModelNet40
+  pc_dir: modelnet40_pc
+  n_points: 1024
+
+model:
+  embed_dim: 384
+  num_groups: 64
+  group_size: 32
+  extractor_depth: 12
+  num_heads: 6
+
+k_way: 5
+n_shot: 10
+n_query: 20
+n_episodes: 10
