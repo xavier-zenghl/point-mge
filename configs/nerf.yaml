@@ -1,0 +1,19 @@
+data:
+  dataset: shapenet_renders
+  data_root: data/ShapeNet55/renders
+  image_size: 128
+  num_views: 24
+
+model:
+  plane_resolution: 64
+  plane_channels: 32
+  mlp_hidden: 128
+
+train:
+  epochs_per_object: 1000
+  lr: 5e-4
+  batch_size_rays: 4096
+
+output:
+  feature_dir: data/ShapeNet55/triplane_features
+  save_freq: 100
