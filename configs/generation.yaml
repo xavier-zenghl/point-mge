@@ -1,0 +1,30 @@
+data:
+  dataset: shapenet55
+  data_root: data/ShapeNet55
+  pc_dir: shapenet_pc
+  n_points: 2048
+  train_split: train
+
+model:
+  vqvae_embed_dim: 384
+  num_groups: 64
+  group_size: 32
+  num_heads: 6
+  codebook_size: 8192
+  gpt_embed_dim: 384
+  gpt_depth: 12
+  gpt_heads: 6
+  num_classes: 55
+
+train:
+  epochs: 300
+  batch_size: 64
+  lr: 1e-4
+  weight_decay: 0.05
+  warmup_epochs: 10
+  min_lr: 1e-6
+
+output:
+  exp_dir: experiments/generation
+  save_freq: 50
+  log_freq: 10
